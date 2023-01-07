@@ -1,0 +1,418 @@
+#container{
+    background: #0A7792;
+    border: 5px solid;
+    border-color:#000151;
+    width: 300px;
+    height: 300px;
+    border-radius: 15%;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+
+
+}
+#buyBtn{
+    background: #31A825;
+    position: fixed;
+    left: 165px;
+    top: 40px;
+    border: 2px solid;
+    border-radius: 20%;
+    font-weight: bold;	
+    font-size: 20px;
+    transition: 0.1s;
+    
+    
+    margin: auto;
+}
+#buyBtn:hover{
+    background:#1E850A;
+}
+#buyBtn:active{
+    font-size: 15px;
+}
+
+.sellBtn{
+    background: #D95514;
+    position: fixed;
+    left: 105px;
+    top: 40px;
+    
+    border: 2px solid;
+    border-radius: 20%;
+    font-weight: bold;	
+    font-size: 20px;
+    transition: 0.1s;
+
+    
+    margin: auto;
+
+
+}
+.sellBtn:hover{
+    background:#D8320B ;
+}
+.sellBtn:active{
+    font-size: 15px;
+}
+
+/*#extendTime{
+    position:absolute;
+    left: 200px;
+    top: 120px;
+    background: #CFD11B;
+    font-size: 15px;
+    transition: 0.1s;
+
+}
+#extendTime:hover{
+    background: #C9BE06;
+}
+#extendTime:active{
+    font-size: 12.5px;
+}*/
+#extendTime{
+    position: absolute;
+    font-size: 15px;
+    top: 200px;
+
+    left: 180px;
+    background: #C9BE06;
+
+    
+
+    
+}
+#extendTime:active{
+    font-size: 12px;
+}
+
+
+.txt{
+    font-weight: 50;
+    font-size: 20px;
+    font-style:initial;
+
+}
+#fact{
+    width: 260px;
+    border:solid;
+    border-color:black;
+    background:#111739;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 250px;
+    animation: message 1s;
+    animation-fill-mode: forwards;
+    position:fixed;
+    left: 2px;
+
+    color: #06A23D;
+}
+@keyframes message {
+    from{top: -400px;}
+    to{top:350px;}
+}
+
+.instraction{
+    width: 250px;
+    border:solid;
+    background: #044817;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 210px;
+    animation: instraction 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    bottom: 40px;
+    color: white;
+
+}
+#loser{
+    position: relative;
+    top: 100px;
+}
+li{
+    padding-top: 20px;
+}
+
+@keyframes instraction {
+    from{left: -400px;}
+    to{left:1px;}
+}
+#show_hide{
+    background: #D95514;
+    position: fixed;
+    top: 270px;
+    left: 70px;
+    border: 2px solid;
+    border-radius: 10%;
+    font-weight: bold;
+    font-size: 20px;
+
+    
+    transition: 0.3s
+
+
+}
+
+#show_hide:hover{
+    background: #D8320B;
+}
+#show_hide:active{
+    font-size:15px;
+}
+#loser{
+    position: relative;
+    top: -150px;
+    
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    animation: resultMessage 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes resultMessage {
+    from{left: -150px;}
+    to{left:140px;}
+}
+#data_container{
+    position: fixed;
+    bottom:70px;
+}
+#alert{
+    position: fixed;
+    left: 140px;
+    top: 100px;
+    color:#CFD11B ;
+    font-size: 20px;
+    font-weight: bold;
+}
+#factoryMarket{
+    background: #BF5608;
+    width: 260px;
+    height: 200px;
+    border: solid;
+    position:fixed;
+    top: 350px;
+    
+}
+#factoryimg{
+    position: relative;
+    top: 185px;
+    left: 30px;
+    border: solid;
+    border-bottom: none;
+    
+
+}
+
+
+#factoryimg:hover #info{
+    visibility: visible;
+    width: 10px;
+
+}
+#buyFactory{
+    position: relative;
+    top:206px;
+    left: 124px;
+    font-weight: bold;
+    background: #31A825;
+    transition: 0.1s;
+    border:2px solid;
+    font-size: 20px;
+
+
+
+    
+}
+
+#buyFactory:active{
+    font-size: 19px;
+
+
+
+}
+
+#content{
+    position: relative;
+    bottom: 340px;
+    right: 120px;
+}
+#factoryPrice{
+    
+    font-weight:  bold;
+    position: relative;
+    top:339px;
+    left: 225px;
+    
+    border: 2px solid;
+    border-left:none;
+    height: 21px; 
+    background: ;
+    min-height: 2px;
+    font-size: 25px;
+    background: #31A825;
+
+    
+    border-bottom: 2px solid; 
+    width: 40px;
+    height: 25px;
+    
+
+
+}
+
+#holder{
+    position: relative;
+    left: 13px;
+    bottom: 285px;
+
+    
+    
+    width: 101.5px;
+    
+    background:#31A825;
+    border: 2px solid;
+    border-color: black;
+    border-bottom: 1.5px solid;
+
+    height: 20px;
+
+    
+    
+}
+#info{
+    position: relative;
+    left: 10px;
+    bottom: 21px;
+    font-size: 19px;
+    font-weight: bold;
+}
+#recieved{
+
+    color:#FFD700 ;
+    font-size: 15px;
+    position: relative;
+    left: 105px;
+    bottom: 158px;
+}
+#infoBtn{
+    position: relative;
+    left: 150px;
+    top: 10px;
+    
+    transition: 0.1s;
+    border: solid;
+    border-radius: 100%;
+    background:#31A825; 
+    font-size: 20px;
+    width: 30px;
+    font-weight: bold;
+}
+#infoBtn:active{
+    
+    font-size: 18px;
+    width: 27px;
+}
+
+
+#market_icon{
+    position: fixed;
+    left: 30px;
+    width: 45px;
+    transition: 0.1s;
+}
+#market_icon:active{
+    width: 40px;
+}
+#title{
+    position: relative;
+    left: 10px;
+    bottom: 13px;
+}
+#data_container{
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+#quantity{
+    position: relative;
+    left: 140px;
+    font-weight: bold;
+    
+}
+#setting{
+    border: 2px solid;
+    width: 105px;
+    height: 60px;
+    background:#D8320B;
+    position: relative;
+    left: 170px;
+    bottom: 180px;
+    
+}
+#vibration{
+    position: relative;
+    left: 1px;
+    bottom: 0px;
+}
+#vibrationtxt{
+    font-weight: bold;
+
+}
+#settingIcon{
+    position: sticky;
+    left: 240px;
+    bottom: 585px;
+    width: 40px;
+    transition: 0.1s;
+}
+
+#settingIcon:active{
+    width: 35px;
+}
+#save{
+    background: #31A825;
+    width: 60px;
+    border: 2px solid;
+    border-radius:15%; 
+    position: relative;
+    left:20px;
+    top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.1s;
+}
+#save:active{
+    font-size:12.7px;
+    width: 45px;
+}
+#HideBR{
+    position: relative;
+    top: 240px;
+    left: 80px;
+    background: #111739;
+    width: 160px;
+    font-size: 14px;
+    transition: 0.1s;
+    animation: hideshow 1s;
+    animation-fill-mode: forwards;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10%;
+}
+#HideBR:active{
+    width: 130px;
+    font-size: 12px;
+    
+}
+@keyframes hideshow {
+    from{left:-100px;}
+    to{left:70px;}
+    
+}
+
+

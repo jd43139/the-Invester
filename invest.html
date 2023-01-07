@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>THE INVESTER</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Invest</title>
+</head>
+<body style="background: #4C4B4B;">
+	
+	<style type="text/css">
+		#container{
+			background: #0A7792;
+			border: 5px solid;
+			border-color:#000151;
+			width: 300px;
+			height: 300px;
+			border-radius: 15%;
+			position: fixed;
+			top: 30px;
+			left: 0px;
+
+
+		}
+		#buyBtn{
+			background: #31A825;
+			position: fixed;
+			left: 165px;
+			top: 40px;
+			border: 2px solid;
+			border-radius: 20%;
+			font-weight: bold;	
+			font-size: 20px;
+			transition: 0.1s;
+			
+			
+			margin: auto;
+		}
+		#buyBtn:hover{
+			background:#1E850A;
+		}
+		#buyBtn:active{
+			font-size: 15px;
+		}
+
+		.sellBtn{
+			background: #D95514;
+			position: fixed;
+			left: 105px;
+			top: 40px;
+			
+			border: 2px solid;
+			border-radius: 20%;
+			font-weight: bold;	
+			font-size: 20px;
+			transition: 0.1s;
+
+			
+			margin: auto;
+
+
+		}
+		.sellBtn:hover{
+			background:#D8320B ;
+		}
+		.sellBtn:active{
+			font-size: 15px;
+		}
+
+		/*#extendTime{
+			position:absolute;
+			left: 200px;
+			top: 120px;
+			background: #CFD11B;
+			font-size: 15px;
+			transition: 0.1s;
+
+		}
+		#extendTime:hover{
+			background: #C9BE06;
+		}
+		#extendTime:active{
+			font-size: 12.5px;
+		}*/
+		#extendTime{
+			position: absolute;
+			font-size: 15px;
+			top: 200px;
+		
+			left: 180px;
+			background: #C9BE06;
+
+			
+
+			
+		}
+		#extendTime:active{
+			font-size: 12px;
+		}
+		
+
+		.txt{
+			font-weight: 50;
+			font-size: 20px;
+			font-style:initial;
+
+		}
+		#fact{
+			width: 260px;
+			border:solid;
+			border-color:black;
+			background:#111739;
+			margin: auto;
+			margin-bottom: 30px;
+			height: 250px;
+			animation: message 1s;
+			animation-fill-mode: forwards;
+			position:fixed;
+			left: 2px;
+
+			color: #06A23D;
+		}
+		@keyframes message {
+			from{top: -400px;}
+			to{top:350px;}
+		}
+
+		.instraction{
+			width: 250px;
+			border:solid;
+			background: #044817;
+			margin: auto;
+			margin-bottom: 30px;
+			height: 210px;
+			animation: instraction 1s;
+			animation-fill-mode: forwards;
+			position: fixed;
+			bottom: 40px;
+			color: white;
+
+		}
+		#loser{
+			position: relative;
+			top: 100px;
+		}
+		li{
+			padding-top: 20px;
+		}
+
+		@keyframes instraction {
+			from{left: -400px;}
+			to{left:1px;}
+		}
+		#show_hide{
+			background: #D95514;
+			position: fixed;
+			top: 270px;
+			left: 70px;
+			border: 2px solid;
+			border-radius: 10%;
+			font-weight: bold;
+			font-size: 20px;
+
+			
+			transition: 0.3s
+		
+
+		}
+
+		#show_hide:hover{
+			background: #D8320B;
+		}
+		#show_hide:active{
+			font-size:15px;
+		}
+		#loser{
+			position: relative;
+			top: -150px;
+			
+			color: black;
+			font-size: 30px;
+			font-weight: bold;
+			animation: resultMessage 1s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes resultMessage {
+			from{left: -150px;}
+			to{left:140px;}
+		}
+		#data_container{
+			position: fixed;
+			bottom:70px;
+		}
+		#alert{
+			position: fixed;
+			left: 140px;
+			top: 100px;
+			color:#CFD11B ;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		#factoryMarket{
+			background: #BF5608;
+			width: 260px;
+			height: 200px;
+			border: solid;
+			position:fixed;
+			top: 350px;
+			
+		}
+		#factoryimg{
+			position: relative;
+			top: 185px;
+			left: 30px;
+			border: solid;
+			border-bottom: none;
+			
+
+		}
+
+
+		#factoryimg:hover #info{
+			visibility: visible;
+			width: 10px;
+
+		}
+		#buyFactory{
+			position: relative;
+			top:206px;
+			left: 124px;
+			font-weight: bold;
+			background: #31A825;
+			transition: 0.1s;
+			border:2px solid;
+			font-size: 20px;
+
+
+
+			
+		}
+
+		#buyFactory:active{
+			font-size: 19px;
+
+
+
+		}
+		
+		#content{
+			position: relative;
+			bottom: 340px;
+			right: 120px;
+		}
+		#factoryPrice{
+			
+			font-weight:  bold;
+			position: relative;
+			top:339px;
+			left: 225px;
+			
+			border: 2px solid;
+			border-left:none;
+			height: 21px; 
+			background: ;
+			min-height: 2px;
+			font-size: 25px;
+			background: #31A825;
+
+			
+			border-bottom: 2px solid; 
+			width: 40px;
+			height: 25px;
+			
+
+
+		}
+
+		#holder{
+			position: relative;
+			left: 13px;
+			bottom: 285px;
+
+			
+			
+			width: 101.5px;
+			
+			background:#31A825;
+			border: 2px solid;
+			border-color: black;
+			border-bottom: 1.5px solid;
+
+			height: 20px;
+
+			
+			
+		}
+		#info{
+			position: relative;
+			left: 10px;
+			bottom: 21px;
+			font-size: 19px;
+			font-weight: bold;
+		}
+		#recieved{
+
+			color:#FFD700 ;
+			font-size: 15px;
+			position: relative;
+			left: 105px;
+			bottom: 158px;
+		}
+		#infoBtn{
+			position: relative;
+			left: 150px;
+			top: 10px;
+			
+			transition: 0.1s;
+			border: solid;
+			border-radius: 100%;
+			background:#31A825; 
+			font-size: 20px;
+			width: 30px;
+			font-weight: bold;
+		}
+		#infoBtn:active{
+			
+			font-size: 18px;
+			width: 27px;
+		}
+		
+		
+		#market_icon{
+			position: fixed;
+			left: 30px;
+			width: 45px;
+			transition: 0.1s;
+		}
+		#market_icon:active{
+			width: 40px;
+		}
+		#title{
+			position: relative;
+			left: 10px;
+			bottom: 13px;
+		}
+		#data_container{
+			position: relative;
+			top: 30px;
+			left: 20px;
+		}
+		#quantity{
+			position: relative;
+			left: 140px;
+			font-weight: bold;
+			
+		}
+		#setting{
+			border: 2px solid;
+			width: 105px;
+			height: 60px;
+			background:#D8320B;
+			position: relative;
+			left: 170px;
+			bottom: 180px;
+			
+		}
+		#vibration{
+			position: relative;
+			left: 1px;
+			bottom: 0px;
+		}
+		#vibrationtxt{
+			font-weight: bold;
+
+		}
+		#settingIcon{
+			position: sticky;
+			left: 240px;
+			bottom: 585px;
+			width: 40px;
+			transition: 0.1s;
+		}
+
+		#settingIcon:active{
+			width: 35px;
+		}
+		#save{
+			background: #31A825;
+			width: 60px;
+			border: 2px solid;
+			border-radius:15%; 
+			position: relative;
+			left:20px;
+			top: 10px;
+			font-weight: bold;
+			font-size: 17px;
+			transition: 0.1s;
+		}
+		#save:active{
+			font-size:12.7px;
+			width: 45px;
+		}
+		#HideBR{
+			position: relative;
+			top: 240px;
+			left: 80px;
+			background: #111739;
+			width: 160px;
+			font-size: 14px;
+			transition: 0.1s;
+			animation: hideshow 1s;
+			animation-fill-mode: forwards;
+			font-weight: bold;
+			border: 3px solid black;
+			border-radius: 10%;
+		}
+		#HideBR:active{
+			width: 130px;
+			font-size: 12px;
+			
+		}
+		@keyframes hideshow {
+			from{left:-100px;}
+			to{left:70px;}
+			
+		}
+		
+
+
+	</style>
+	
+	
+
+	<div id="factoryMarket">
+		<h2 id="title">FACTORY MARKET</h2>
+		<p id="quantity">Factories</p>
+		
+		<button onclick="showOrHideInfo()" id="infoBtn">i</button>
+		<div id="content">
+		
+			<p id="factoryPrice">$30</p>
+			<button onclick="purchaseFactory()" id="buyFactory">Purchase</button>
+			
+
+			<img id="factoryimg" src="https://www.freeiconspng.com/thumbs/factory-icon/factory-icon--vista-business-icons--softiconsm-28.png"  width="100px">
+
+			<!--img src="https://toppng.com/uploads/preview/factory-save-icon-format-factory-icon-3d-11553453208aixzhinlke.png" id="factoryimg" alt="f" width="100px"-->
+
+			
+			
+			
+		
+		
+		
+		</div>
+		
+		<div id="holder"><p id="info">$8 per 5s</p></div>
+
+		
+
+	</div>
+
+	<div  id="fact">
+		
+		<p style="font-size: 20px;"><strong>Business report</strong></p>
+		<p id="outlay">outlay</p>
+		<p id="revenue"> </p>
+		<p id="percent"></p>
+		<p id="topPrice">topPrice</p>
+		<p id="buys"></p>
+		<p id="sells"></p>
+		
+	</div>
+
+	
+	<div id="container">
+		<img id="market_icon" onclick="showOrHideMarket()" src="https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/store-circle-green-512.png"   alt="">
+		<button id="extendTime" onclick="extend()">Extend time</button>
+		<input onclick="show_hideBr()" id="HideBR" type="button"  style="color:#0A8A13; ">
+
+		<button id="buyBtn" id="buy"  onclick="buy()">buy</button>
+		<button class="sellBtn"  id="sell"  onclick="sell()">sell</button>
+		<div  class="txt" id="data_container" style=" color:#43F850;">
+			<p id="alert">Time extended 20s</p>
+			<p id="balance"></p>
+			<p id="property"></p>
+			<p id="propertyPrice"></p>
+			<p id="countdown"></p>
+			<p id="recieved">+$8</p>
+			<p id="loser">you lost</p>
+
+
+		</div>
+
+		<div  class="instraction" id="i">
+			<h1 id="instraction">Instruction</h1>
+			
+			<li id="fst">You shold have at least <strong>$600</strong> and 20 properties before the countdown reachs <strong>0</strong></li>
+			
+		
+		</div>
+
+
+		<div>
+			<input id="show_hide" type="button"  onclick="show_hideI()" >
+		</div>
+		<img id="settingIcon" onclick="showOrHideSetting()" src="http://lapstechnologies.com/wp-content/uploads/2018/08/brand2.0_feature_icon_management_setting.png" alt="">
+
+		<div id="setting">
+			<label id="vibrationtxt" for="vibration_">
+				Vibration
+			</label>
+			<input id="vibration" value="1" type="checkbox" name="vibration_" >
+
+			<button id="save" onclick="saveCheck()">Save</button>
+		</div>
+		
+		
+	</div>
+	<!--div  id="fact">
+		<p id="outlay">outlay</p>
+		<p id="revenue"> </p>
+		<p id="profit"></p>
+		<p id="buys"></p>
+		<p id="sells"></p>
+	</div-->
+	
+	
+	<p id="balance"></p>
+	<p id="property"></p>
+	<p id="propertyPrice"></p>
+	<p id="outlay"></p>
+	<p id="revenue"></p>
+	<p id="profit"></p>
+	<h1  id="win"></h1>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" >
+
+
+
+		
+		var fst =document.getElementById('fst')
+/*var snd=document.getElementById('snd')
+var trd=document.getElementById('trd')
+var frth=document.getElementById('frth')
+var fifth=document.getElementById('fifth')
+
+fst.style.display="none"
+snd.style.display="none"
+trd.style.display="none"
+frth.style.display="none"
+fifth.style.display="none"*/
+
+
+
+times=0
+
+
+var show_hide=document.getElementById('show_hide')
+var instraction=document.getElementById('instraction')
+instraction.style.display="none"
+
+show_hide.value="Show instruction"
+ins=document.getElementById('i')
+ins.style.display="none"
+
+
+//For show instruction button
+function show_hideI(){
+
+	if(ins.style.display=="none"){
+		ins.style.display="block"
+		show_hide.value="Hide instruction"
+		if(times>=2){
+			console.log('limit')
+		}else{
+				
+			$(instraction).fadeIn(500)
+			fst.style.display="block"
+
+		}
+	}else{
+		$(ins).fadeOut(500)
+
+		show_hide.value="Show instruction"
+
+	}
+}
+
+
+
+	
+	
+	
+let counttimes=0
+
+var duration=20
+var clickTimes=0
+var buys=0
+var sells=0
+var balance=11
+var property=0
+var count=0
+var propertyPrice=5
+var outlay=0
+var revenue=0
+var profit=0
+var theCountdown=120
+var countdown=theCountdown
+var countTimes=0
+var quantity=0
+var percent=0
+var percent2=0
+var hideBR=document.getElementById('HideBR')
+hideBR.value="Show Business report"
+hideBR.style.display="none";
+var sp="factory"
+var waiting=5000;
+var setting=document.getElementById('setting')
+setting.style.display="none";
+var recieved=document.getElementById('recieved')
+recieved.style.display="none"
+
+var extendTime=document.getElementById('extendTime')
+extendTime.style.display="none"
+var alert= document.getElementById('alert')
+alert.style.display="none"
+var factoryMarket=document.getElementById('factoryMarket')
+var revenueFromFactories=0
+var outlayFromFactories=0
+factoryMarket.style.display='none'
+var resultMessage=document.getElementById('loser')
+resultMessage.style.display="none"
+var purchase=document.getElementById('buyFactory')
+var check_vibration=document.getElementById('vibration')
+var situation=0;
+function saveCheck(){
+	if(check_vibration.checked==true){
+		situation=50
+		console.log("checked succefully")
+	}else{
+		console.log("unchecked succefully")
+		situation=0
+	}
+
+	$(setting).fadeOut(400)
+
+}
+
+function showOrHideSetting(){
+	if(setting.style.display=="none"){
+		$(setting).fadeIn()
+	}else{
+		$(setting).fadeOut()
+	}
+}
+
+
+function showOrHideMarket(){
+	
+	if(factoryMarket.style.display=='none'){
+		$(factoryMarket).fadeIn()
+	}else{
+		$(factoryMarket).fadeOut()
+	}
+	setInterval(function(){
+
+		if(countdown==theCountdown ||(countTimes==0 && balance<31)){
+				purchase.disabled=true;
+			}else{
+				purchase.disabled=false;
+			}
+
+	},100)
+
+
+	
+
+}
+document.getElementById('quantity').innerHTML=`Factories : ${quantity}`
+
+
+function purchaseFactory(){
+
+	countTimes+=1
+	if(balance<31){
+		console.log('limit')
+	}else{
+		balance-=30
+		outlay+=30
+		outlayFromFactories+=30
+		percent2=(outlayFromFactories/outlay)*100
+		quantity+=1
+		navigator.vibrate(situation)
+
+		document.getElementById('quantity').innerHTML=`Factories : ${quantity}`
+
+		if(countTimes>=2){
+			console.log('limit factories')
+		
+			
+			
+		}else{
+			
+
+				
+
+			
+
+			setInterval(function(){
+
+				if(balance<=0 ||countdown<=0){
+					
+
+					console.log('out')
+					return;
+				}else{
+					
+					console.log("your balance: "+balance)
+					balance+=8*(quantity)
+
+					console.log(quantity)
+					console.log("you recieved")
+					console.log("factories:"+quantity)
+					if(quantity>1){
+						sp="factories"
+					}else{
+						sp="factory"
+					}
+					recieved.style.display="block"
+					recieved.innerHTML=`+$${8*(quantity)}`
+					revenue+=8*(quantity)
+					revenueFromFactories+=8*(quantity)
+					percent=(revenueFromFactories/revenue)*100
+					setTimeout(function(){
+						$(recieved).fadeOut(2000)
+
+					},1000)
+				}
+				
+
+
+
+
+			},waiting)
+
+
+			
+
+			
+			
+			
+		}
+	}
+	
+
+
+
+}
+
+
+var holderInfo=document.getElementById('holder')
+holderInfo.style.display="none"
+function showOrHideInfo(){
+	document.getElementById('buyFactory').style.position.left="300px"
+	if(holderInfo.style.display=="none"){
+		
+		$(holderInfo).fadeIn()
+		holderInfo.style.display="block"
+	}else{
+		$(holderInfo).fadeOut()
+
+		
+		
+	}
+
+}
+
+function extend(){
+
+
+	countdown+=20
+	countit+=20*(1000/500)
+	console.log(countdown)
+	extendTime.disabled=true;
+
+
+
+	balance-= Math.round((75/100*balance))
+	navigator.vibrate(situation)
+	setTimeout(function(){
+		alert.style.display='block'
+		setTimeout(function(){
+			$(alert).fadeOut(3000)
+
+			extendTime.style.display="none"
+
+		},100)
+
+
+	},1)
+	
+	
+}
+
+console.log(countdown)
+waitDuration=1000
+
+var countit=(countdown)*(1000/500)
+
+
+
+document.getElementById("sell").style.display="none"
+gameFact=document.getElementById('fact')
+gameFact.style.display="none"
+
+
+
+
+document.getElementById('propertyPrice').innerHTML=`Property price: $${propertyPrice}`
+document.getElementById('balance').innerHTML=`Balance: $${balance}`
+document.getElementById('property').innerHTML=`Property: ${property}`
+document.getElementById('countdown').innerHTML=`Countdown: ${countdown}s`
+
+//var listContainer=document.getElementById("listContainer")
+//listContainer.style.display="block"
+
+function buy(){
+	
+
+	console.log('buy')
+	let top=[]
+	
+	//buys+=1
+	document.getElementById("sell").style.display="block"
+	if (balance<=propertyPrice &&!(countdown<=0)){
+		console.log("not enaugh")
+
+		clickTimes+=1
+	}else{
+
+		clickTimes+=1
+		property+=1
+		balance-=propertyPrice
+		outlay+=propertyPrice
+		buys+=1
+		navigator.vibrate(situation)
+		top=[]
+		
+
+		
+	}
+	
+		
+		
+		//To prevent interval confusion
+		if(clickTimes>=2){
+			console.log('limit')
+		}else{
+
+
+			setInterval(function(){
+
+				
+			
+				if (countdown<=0 &&balance<600 && property<20){
+					top.sort(function(a,b){return a-b});
+						
+						
+						
+					
+					document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+
+					
+					
+
+				
+					//gameFact.style.display="block"
+					resultMessage.style.display="block"
+					
+					
+					document.getElementById('loser').innerHTML="You lost"
+					hideBR.style.display="block";
+					document.getElementById('outlay').innerHTML=`<p>outlay:$${outlay}<span style='color:#185118'> ${percent2.toString().slice(0,4)}% from factoreis</span></p>`
+					document.getElementById('revenue').innerHTML=`<p>revenue:$${revenue}<span style=color:#185118 '> ${percent.toString().slice(0,4)}% from factories</span></p>`
+					document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+					document.getElementById('sells').innerHTML=`Sales: ${sells}`
+					
+
+					document.getElementById('buyBtn').disabled=true
+					document.getElementById('sell').disabled=true
+					extendTime.disabled=true;
+					
+
+					
+
+				}
+				
+				if (countdown<=0 &&balance>=600&&property>=20){
+					top.sort(function(a,b){return a-b});
+					document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+					
+					//gameFact.style.display="block"
+					hideBR.style.display="block";
+					resultMessage.style.display="block"
+					//console.log('countdown finishrd')
+					//countdown=0
+					document.getElementById('loser').innerHTML=`<p style=color:#FFD700;>${'winner'}</p>`
+					document.getElementById('outlay').innerHTML=`<p>outlay:$${outlay}<span style='color:#185118'> ${percent2.toString().slice(0,4)}% from factoreis</span></p>`
+					document.getElementById('revenue').innerHTML=`<p>revenue:$${revenue}<span style=color:#185118 '> ${percent.toString().slice(0,4)}% from factories</span></p>`
+					document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+					document.getElementById('sells').innerHTML=`sales: ${sells}`
+					document.getElementById('buyBtn').disabled=true
+					document.getElementById('sell').disabled=true
+					extendTime.disabled=true;
+					
+
+					
+
+				}
+
+				if(countdown<=0 &&balance>=600 &&property<20){
+					top.sort(function(a,b){return a-b});
+					document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+					
+					//gameFact.style.display="block"
+					hideBR.style.display="block";
+					resultMessage.style.display="block"
+					document.getElementById('outlay').innerHTML=`<p>outlay:$${outlay}<span style='color:#185118'> ${percent2.toString().slice(0,4)}% from factoreis</span></p>`
+					document.getElementById('revenue').innerHTML=`<p>revenue:$${revenue}<span style=color:#185118 '> ${percent.toString().slice(0,4)}% from factories</span></p>`
+					//console.log('countdown finishrd')
+					//countdown=0
+					document.getElementById('loser').innerHTML="You lost"
+					
+					document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+					document.getElementById('sells').innerHTML=`Sales: ${sells}`
+					document.getElementById('buyBtn').disabled=true
+					document.getElementById('sell').disabled=true
+					extendTime.disabled=true;
+
+				}
+				if(countdown<=0 &&balance<600 &&property>=20){
+					top.sort(function(a,b){return a-b});
+					document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+					
+					//gameFact.style.display="block"
+					hideBR.style.display="block";
+					resultMessage.style.display="block"
+					document.getElementById('outlay').innerHTML=`<p>outlay:$${outlay}<span style='color:#185118'> ${percent2.toString().slice(0,4)}% from factoreis</span></p>`
+					document.getElementById('revenue').innerHTML=`<p>revenue:$${revenue}<span style=color:#185118 '> ${percent.toString().slice(0,4)}% from factories</span></p>`
+					//console.log('countdown finishrd')
+					//countdown=0
+					document.getElementById('loser').innerHTML="You lost"
+					
+					document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+					document.getElementById('sells').innerHTML=`Sales: ${sells}`
+					document.getElementById('buyBtn').disabled=true
+					document.getElementById('sell').disabled=true
+					extendTime.disabled=true;
+
+				}
+				if (balance<=0 &&!(countdown<=0)){
+					waitDuration=0;
+					top.sort(function(a,b){return a-b});
+					document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+		
+							
+		
+					balance=0
+					countdown=0
+					gameFact.style.display="block"
+					document.getElementById('outlay').innerHTML=`outlay:$${outlay}`
+					document.getElementById('revenue').innerHTML=`revenue:$${revenue}`
+					document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+					document.getElementById('sells').innerHTML=`Sales: ${sells}`
+					document.getElementById('balance').innerHTML=`Balance: $${balance}`
+					countit=0
+					document.getElementById('loser').innerHTML="You lost"
+					document.getElementById('property').innerHTML=`Property: ${property}`
+					
+					document.getElementById('buyBtn').disabled=true
+					document.getElementById('sell').disabled=true
+					extendTime.disabled=true;
+
+
+				
+				
+
+				}
+
+
+				if(countdown<=25 && (balance/propertyPrice)<=4 &&property<15){
+					extendTime.style.display="block"
+					
+				}
+				
+
+
+				
+
+				if(countdown<=0){
+
+					return;
+					countdown=0
+				}else{
+					countdown--;
+					
+					document.getElementById('countdown').innerHTML=`countdown: ${countdown}s`
+
+					
+
+				}
+
+
+				
+				
+			},waitDuration)
+
+			
+
+			setInterval(function interval(){
+				countit--;
+				//console.log("countit: "+countit)
+
+				if(countit<=0){
+					clearInterval(interval)
+					return;
+
+
+				}
+
+				
+
+
+				
+
+				var prices=[1,-1,2,-2,3,-3,4,-4,5,-5]
+				
+
+				var price=Math.floor(Math.random()*prices.length)
+						
+				propertyPrice+=prices[price]
+				array=[]
+				e=[]
+				array.push(propertyPrice)
+				if(propertyPrice<=1){
+					console.log('limit')
+					propertyPrice=1
+
+				}
+				//for(let i=0; i<buys; i++){
+				top.push(propertyPrice)
+				
+
+					
+					
+					
+
+				//}
+
+				
+					
+
+				document.getElementById('property').innerHTML=`Property: ${property}`
+				document.getElementById('balance').innerHTML=`Balance: $${balance}`
+				document.getElementById('propertyPrice').innerHTML=`Property price: $${propertyPrice}`
+				
+			},500)
+
+			
+			
+	
+
+			
+		}
+
+		
+	
+	
+	
+}
+
+function show_hideBr(){
+	if(gameFact.style.display=="block"){
+		//gameFact.style.display='none'
+		$(gameFact).fadeOut(300)
+		hideBR.value="Show Business report"
+		
+		
+	}else{
+		hideBR.value="Hide Business report"
+		gameFact.style.display="block"
+	}
+}
+
+
+function sell(){
+	//sells+=1
+
+	if (balance<=0 &&!(countdown<=0)){
+		document.getElementById('topPrice').innerHTML=`Top property price: $${top[(top.length)-1]}`
+		
+		balance=0
+		countdown=0
+		document.getElementById('balance').innerHTML=`Balance: $${balance}`
+		countit=0
+		document.getElementById('loser').innerHTML="You lost"
+		gameFact.style.display="block"
+		document.getElementById('outlay').innerHTML=`outlay:$${outlay}`
+		document.getElementById('revenue').innerHTML=`revenue:$${revenue}`
+		document.getElementById('buys').innerHTML=`Purchases: ${buys}`
+		document.getElementById('sells').innerHTML=`Sales: ${sells}`
+		document.getElementById('buyBtn').disabled=true
+		document.getElementById('sell').disabled=true
+		extendTime.disabled=true;
+		return;
+
+	}
+	if (balance<=0){
+		balance=0
+		console.log('limit')		
+	}else{
+		clickTimes+=1
+		if (property<=0){
+			console.log('limit sell')
+
+		}else{
+			property-=1
+			sells+=1
+			navigator.vibrate(situation)
+
+			balance+=propertyPrice
+			revenue+=propertyPrice
+			//document.getElementById('balance').innerHTML=`balance: $${balance}`
+			document.getElementById('property').innerHTML=`Property: ${property}`
+			if(clickTimes>=2){
+				console.log('limit')
+			}else{
+				setInterval(function(){
+
+					var prices=[1,-1,2,-2,3,-3,4,-4,5,-5]
+					var price=Math.floor(Math.random()*prices.length)
+							
+					propertyPrice+=prices[price]
+					if(propertyPrice<=1){
+						console.log('limit')
+						propertyPrice=1
+
+					}
+					document.getElementById('balance').innerHTML=`Balance: $${balance}`
+					document.getElementById('propertyPrice').innerHTML=`Property price: $${propertyPrice}`
+				},500)
+		}
+		
+
+		
+		}	
+	}
+	
+
+
+}
+</script>
+
+	
+	
+		
+
+	
+</body>
+</html>
